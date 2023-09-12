@@ -18,11 +18,14 @@ class Invoice extends Model
         'discount',
         'total'
     ];
-    public function customer(){
+
+    public function customer()
+    {
         return $this->belongsTo(Customer::class);
     }
 
-    public function invoiceItems(){
+    public function invoiceItems()
+    {
         return $this->hasMany(InvoiceItem::class);
     }
 }
